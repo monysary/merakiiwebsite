@@ -20,7 +20,7 @@ function NavItem({ href, children }) {
 function MerakiiLogo({ width }) {
 
   return (
-    <a href='/'>
+    <a href='#'>
       <img src={Merakii_Logo_White} className='py-4' style={{ width: `${width}` }} />
     </a>
   )
