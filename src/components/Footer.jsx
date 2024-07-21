@@ -21,7 +21,7 @@ const socials = [
 export default function Footer() {
   return (
     <footer className="relative bg-gray-800">
-      <div className="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-center md:gap-[600px] lg:px-8">
+      <div className="mx-auto max-w-7xl py-12 md:flex md:items-center md:justify-center md:gap-[500px]">
         <div className="flex justify-center space-x-6 md:order-2">
           {socials.map((social, index) => (
             <IconLinkOut key={index} name={social.name} href={social.href} icon={social.icon} />
