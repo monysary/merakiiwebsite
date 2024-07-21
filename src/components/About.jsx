@@ -7,7 +7,7 @@ export default function About() {
         <div className="mx-auto flex max-w-2xl flex-col items-end justify-between gap-16 lg:mx-0 lg:max-w-none lg:flex-row">
           <div className="w-full lg:max-w-lg lg:flex-auto">
             <img
-              alt=""
+              alt="Full Body Press Shot"
               src={Press_Shot}
               className="aspect-[6/5] w-full bg-gray-50 object-cover lg:aspect-auto lg:h-[34.5rem]"
             />

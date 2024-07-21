@@ -10,6 +10,7 @@ const songs = [
   {
     name: 'Abort',
     description: 'Single',
+    alt: 'Abort Track Image',
     imageUrl: Abort_Track_Image,
     spotifyUrl: 'https://open.spotify.com/track/6DZxE0XJ4prFAs9IVprsT5?si=16489ca5224b4fd7',
     soundCloudUrl: 'https://soundcloud.com/merakii_official/abort?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
@@ -18,6 +19,7 @@ const songs = [
   {
     name: 'High',
     description: 'Single',
+    alt: 'High Track Image',
     imageUrl: High_Track_Image,
     spotifyUrl: 'https://open.spotify.com/track/2JiJmyU03INIMbpHCXTz1Q?si=2456ddb123344219',
     soundCloudUrl: 'https://soundcloud.com/merakii_official/merakii-high-1?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
@@ -26,6 +28,7 @@ const songs = [
   {
     name: 'New Track',
     description: 'Coming Soon',
+    alt: 'New Track Coming Soon',
     imageUrl: New_Track_Image,
     spotifyUrl: '',
     soundCloudUrl: '',
@@ -47,7 +50,7 @@ export default function Music() {
         >
           {songs.map((song) => (
             <li key={song.name} className="bg-gray-800 p-8 w-full h-full md:w-max shadow-xl">
-              <img alt="" src={song.imageUrl} className="m-auto shadow-lg" />
+              <img alt="" src={song.imageUrl} className="m-auto shadow-lg" alt={song.alt} />
               <h3 className="mt-6 text-[2rem] font-semibold leading-7 tracking-tight text-white">{song.name}</h3>
               <p className="text-base leading-6 text-gray-400 py-3">{song.description}</p>
               <ul role="list" className={`mt-6 flex justify-center gap-x-6 ${song.name == 'New Track' && 'hidden'}`}>
