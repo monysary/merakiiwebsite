@@ -16,25 +16,8 @@ function Tabs({ tabs, setTabs }) {
 
   return (
     <div>
-      {/* Mobile View */}
-      <div className="sm:hidden">
-        <label htmlFor="tabs" className="sr-only">
-          Select a tab
-        </label>
-        <select
-          id="tabs"
-          name="tabs"
-          defaultValue={tabs.find((tab) => tab.current).name}
-          className="block w-full rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500"
-        >
-          {tabs.map((tab) => (
-            <option key={tab.name}>{tab.name}</option>
-          ))}
-        </select>
-      </div>
-      {/* Desktop View */}
-      <div className="hidden sm:flex justify-center mb-10">
-        <nav aria-label="Tabs" className="flex shadow max-w-[500px]">
+      <div className="flex justify-center mb-10">
+        <nav aria-label="Tabs" className="flex shadow md:max-w-[500px] max-w-[300px]">
           {tabs.map((tab, tabIdx) => (
             <button
               key={tab.name}
@@ -66,16 +49,16 @@ function Tabs({ tabs, setTabs }) {
 export default function Video() {
   const [tabs, setTabs] = useState([
     { name: 'Music Video', href: 'https://www.youtube.com/embed/8Xo1H_syE4Y', current: true },
-    { name: 'Featured Live Set', href: 'https://www.youtube.com/embed/jixFFRlR1n4', current: false },
+    { name: 'Live Set', href: 'https://www.youtube.com/embed/jixFFRlR1n4', current: false },
   ])
 
   return (
-    <div className="pb-24 sm:pb-30 relative flex justify-center">
-      <div className="mx-auto px-6 text-center lg:px-20">
-        <div className="mx-auto max-w-2xl">
+    <div id="video" className="scroll-mt-16 md:scroll-mt-0 pb-24 sm:pb-30 relative flex justify-center">
+      <div className="md:px-6 text-center lg:px-20 w-11/12">
+        <div className="mx-auto md:max-w-2xl">
           <h2 className="text-3xl font-medium tracking-tight text-white sm:text-4xl tracking-[8px]">VIDEO</h2>
         </div>
-        <div id="video" className="scroll-mt-16 mt-20 mx-auto max-w-7xl px-6 text-center lg:px-20">
+        <div className="scroll-mt-16 mt-10 md:mt-20 mx-auto md:max-w-7xl md:px-6 text-center lg:px-20">
           <Tabs tabs={tabs} setTabs={setTabs} />
           <div className="flex justify-center">
             {tabs.map(tab => {
@@ -87,7 +70,7 @@ export default function Video() {
                     allow="autoplay; encrypted-media"
                     allowFullScreen
                     title={tab.name}
-                    className="w-[1200px] h-[675px]"
+                    className="w-full h-[220px] sm:h-[400px] md:w-[1200px] md:h-[675px]"
                   />
 
                 )

@@ -39,14 +39,14 @@ const songs = [
 export default function Music() {
 
   return (
-    <div id='music' className="py-24 sm:py-30 relative flex justify-center">
+    <div id='music' className="scroll-mt-16 md:scroll-mt-0 pb-24 md:py-24 sm:py-30 relative flex justify-center">
       <div className="mx-auto max-w-7xl px-6 text-center lg:px-20">
         <div className="mx-auto max-w-2xl">
           <h2 className="text-3xl font-medium tracking-tight text-white sm:text-4xl tracking-[8px]">MUSIC</h2>
         </div>
         <ul
           role="list"
-          className="mx-auto mt-20 grid place-items-center max-w-2xl grid-cols-1 gap-6 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-16"
+          className="mx-auto mt-10 md:mt-20 grid place-items-center max-w-2xl grid-cols-1 gap-6 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-16"
         >
           {songs.map((song) => (
             <li key={song.name} className="bg-gray-800 p-8 w-full h-full md:w-max shadow-xl">
