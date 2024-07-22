@@ -83,10 +83,10 @@ function CloseIcon(props) {
 
 function MobileNavigation(props) {
   return (
-    <div className='sticky top-0 p-4 z-50 md:hidden'>
+    <div className='sticky top-0 pt-6 px-6 z-50 md:hidden'>
       <Popover {...props} className="flex md:hidden justify-end">
         <PopoverButton className="group flex items-center rounded-full bg-white/90 p-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20">
-          <img src={Socials_Octopus_Front} alt='Merakii OctopusMenu' className='w-5' />
+          <img src={Socials_Octopus_Front} alt='Merakii OctopusMenu' className='w-8' />
         </PopoverButton>
         <PopoverBackdrop
           transition
@@ -122,7 +122,7 @@ export default function Navbar() {
   return (
     <>
       <MobileNavigation className="pointer-events-auto md:hidden" />
-      <div className="absolute md:sticky top-0 z-50 md:backdrop-blur hidden md:block">
+      <div className="sticky md:sticky top-0 z-50 md:backdrop-blur hidden md:block">
         <div className="flex flex-1 justify-end md:justify-center w-full">
           <DesktopNavigation className="pointer-events-auto hidden md:block" />
         </div>
