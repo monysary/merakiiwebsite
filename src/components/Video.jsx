@@ -70,7 +70,7 @@ export default function Video() {
                     allow="autoplay; encrypted-media"
                     allowFullScreen
                     title={tab.name}
-                    className="w-full h-[220px] sm:h-[400px] md:w-[1200px] md:h-[675px]"
+                    className="w-full aspect-video md:w-[1200px]"
                   />
 
                 )
