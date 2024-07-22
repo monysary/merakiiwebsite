@@ -45,24 +45,12 @@ function DesktopNavigation(props) {
 function MobileNavItem({ href, children }) {
   return (
     <li>
-      <a href={href} className="block py-2">
-        {children}
-      </a>
+      <PopoverButton>
+        <a href={href} className="block py-2">
+          {children}
+        </a>
+      </PopoverButton>
     </li>
-  )
-}
-
-function ChevronDownIcon(props) {
-  return (
-    <svg viewBox="0 0 8 6" aria-hidden="true" {...props}>
-      <path
-        d="M1.75 1.75 4 4.25l2.25-2.5"
-        fill="none"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
   )
 }
 
@@ -101,7 +89,9 @@ function MobileNavigation(props) {
             <PopoverButton aria-label="Close menu" className="-m-1 p-1">
               <CloseIcon className="h-6 w-6 text-zinc-500 dark:text-zinc-400" />
             </PopoverButton>
-            <MerakiiLogo width={'100px'} />
+            <PopoverButton>
+              <MerakiiLogo width={'100px'} />
+            </PopoverButton>
           </div>
           <nav className="mt-6">
             <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
