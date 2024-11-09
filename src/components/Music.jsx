@@ -101,7 +101,7 @@ export default function Music() {
               <p className="text-base leading-6 text-gray-400 py-3">{song.description}</p>
               <ul role="list" className={`mt-6 flex justify-center gap-x-6 ${song.name == 'New Track' && 'hidden'}`}>
                 {song.linkOut.map(link => (
-                  <li>
+                  <li key={link.name}>
                     <IconLinkOut name={link.name} href={link.href} icon={link.icon} />
                   </li>
                 ))}

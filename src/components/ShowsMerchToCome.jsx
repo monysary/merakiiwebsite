@@ -22,7 +22,7 @@ export default function ShowsMerchToCome() {
 
   return (
     <div id="shows_merch" className="scroll-mt-24 flex justify-center md:block">
-      <div className="hidden md:block relative bg-gray-800 py-16 bg-center bg-no-repeat bg-cover bg-fixed" style={{ backgroundImage: `url(${Academy_Stage_Shot})` }}>
+      <div className="hidden md:block relative bg-gray-800 py-16 bg-center bg-no-repeat bg-cover lg:bg-fixed" style={{ backgroundImage: `url(${Academy_Stage_Shot})` }}>
         <div className="mx-auto w-max flex flex-col items-center backdrop-blur-md px-8 py-4 drop-shadow-xl">
           <p className="text-2xl font-semibold leading-7 text-slate-100">Show Dates & Merch</p>
           <h2 className="mt-4 text-4xl font-bold text-slate-100 sm:text-7xl text-nowrap">COMING SOON</h2>

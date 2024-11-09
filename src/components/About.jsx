@@ -1,4 +1,4 @@
-import Press_Shot from '../assets/Press_Shot.jpeg'
+import Bio_Pic_v2 from '../assets/Bio_Pic_v2.jpg'
 
 export default function About() {
   return (
@@ -8,7 +8,7 @@ export default function About() {
           <div className="w-full lg:max-w-lg lg:flex-auto">
             <img
               alt="Full Body Press Shot"
-              src={Press_Shot}
+              src={Bio_Pic_v2}
               className="aspect-[6/5] w-full bg-gray-50 object-cover lg:aspect-auto lg:h-[34.5rem]"
             />
           </div>
