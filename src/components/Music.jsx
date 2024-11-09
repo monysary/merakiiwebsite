@@ -1,8 +1,7 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSpotify, faSoundcloud, faApple } from '@fortawesome/free-brands-svg-icons'
+import { faSpotify, faSoundcloud, faApple, faAmazon } from '@fortawesome/free-brands-svg-icons'
 import Abort_Track_Image from '../assets/Abort_Track_Image.png'
 import High_Track_Image from '../assets/High_Track_Image.png'
-import New_Track_Image from '../assets/New_Track_Image.png'
+import Quantum_City_Track_Image from '../assets/Quantum_City_Track_Image.png'
 import CtaButton from './CtaButton'
 import IconLinkOut from './IconLinkOut'
 
@@ -12,27 +11,74 @@ const songs = [
     description: 'Single',
     alt: 'Abort Track Image',
     imageUrl: Abort_Track_Image,
-    spotifyUrl: 'https://open.spotify.com/track/6DZxE0XJ4prFAs9IVprsT5?si=16489ca5224b4fd7',
-    soundCloudUrl: 'https://soundcloud.com/merakii_official/abort?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
-    appleMusicUrl: 'https://music.apple.com/us/album/abort-single/1677093347',
+    linkOut: [
+      {
+        name: 'Spotify',
+        href: 'https://open.spotify.com/track/6DZxE0XJ4prFAs9IVprsT5?si=16489ca5224b4fd7',
+        icon: faSpotify,
+      },
+      {
+        name: 'SoundCloud',
+        href: 'https://soundcloud.com/merakii_official/abort?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
+        icon: faSoundcloud,
+      },
+      {
+        name: 'Apple Music',
+        href: 'https://music.apple.com/us/album/abort-single/1677093347',
+        icon: faApple,
+      },
+    ]
   },
   {
     name: 'High',
     description: 'Single',
     alt: 'High Track Image',
     imageUrl: High_Track_Image,
-    spotifyUrl: 'https://open.spotify.com/track/2JiJmyU03INIMbpHCXTz1Q?si=2456ddb123344219',
-    soundCloudUrl: 'https://soundcloud.com/merakii_official/merakii-high-1?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
-    appleMusicUrl: 'https://music.apple.com/us/album/high-single/1661438526',
+    linkOut: [
+      {
+        name: 'Spotify',
+        href: 'https://open.spotify.com/track/2JiJmyU03INIMbpHCXTz1Q?si=2456ddb123344219',
+        icon: faSpotify,
+      },
+      {
+        name: 'SoundCloud',
+        href: 'https://soundcloud.com/merakii_official/merakii-high-1?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
+        icon: faSoundcloud,
+      },
+      {
+        name: 'Apple Music',
+        href: 'https://music.apple.com/us/album/high-single/1661438526',
+        icon: faApple,
+      },
+    ]
   },
   {
-    name: 'New Track',
-    description: 'Coming Soon',
-    alt: 'New Track Coming Soon',
-    imageUrl: New_Track_Image,
-    spotifyUrl: '',
-    soundCloudUrl: '',
-    appleMusicUrl: '',
+    name: 'Quantum City',
+    description: 'Single',
+    alt: 'Quantum City Track Image',
+    imageUrl: Quantum_City_Track_Image,
+    linkOut: [
+      {
+        name: 'Spotify',
+        href: 'https://open.spotify.com/track/2FScdoGDYepDTNgBIdwK3n?si=64040c2848f94021',
+        icon: faSpotify,
+      },
+      {
+        name: 'Apple Music',
+        href: 'https://music.apple.com/us/album/quantum-city/1773003430?i=1773003431',
+        icon: faApple,
+      },
+      {
+        name: 'Amazon Music',
+        href: 'https://music.amazon.com/albums/B0DJQ6QFZW?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_WWhQ1jRkR0s9rQS0pCsDxaLk6&trackAsin=B0DJQ6Z2MX',
+        icon: faAmazon,
+      },
+      {
+        name: 'Pandora',
+        href: 'https://pandora.app.link/VeUlEA77mOb',
+        icon: 'PandoraIcon',
+      },
+    ]
   },
 ]
 
@@ -50,19 +96,15 @@ export default function Music() {
         >
           {songs.map((song) => (
             <li key={song.name} className="bg-gray-800 p-8 w-full h-full md:w-max shadow-xl">
-              <img alt="" src={song.imageUrl} className="m-auto shadow-lg" alt={song.alt} />
+              <img src={song.imageUrl} className="m-auto shadow-lg w-64" alt={song.alt} />
               <h3 className="mt-6 text-[2rem] font-semibold leading-7 tracking-tight text-white">{song.name}</h3>
               <p className="text-base leading-6 text-gray-400 py-3">{song.description}</p>
               <ul role="list" className={`mt-6 flex justify-center gap-x-6 ${song.name == 'New Track' && 'hidden'}`}>
-                <li>
-                  <IconLinkOut name={'Spotify'} href={song.spotifyUrl} icon={faSpotify} />
-                </li>
-                <li>
-                  <IconLinkOut name={'SoundCloud'} href={song.soundCloudUrl} icon={faSoundcloud} />
-                </li>
-                <li>
-                  <IconLinkOut name={'Apple Music'} href={song.appleMusicUrl} icon={faApple} />
-                </li>
+                {song.linkOut.map(link => (
+                  <li>
+                    <IconLinkOut name={link.name} href={link.href} icon={link.icon} />
+                  </li>
+                ))}
               </ul>
             </li>
           ))}
