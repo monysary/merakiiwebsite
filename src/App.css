@@ -38,3 +38,10 @@ html * {
   font-weight: 700;
   font-style: normal;
 }
+
+.supported-bg-cover {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
