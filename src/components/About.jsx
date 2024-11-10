@@ -1,18 +1,18 @@
-import Bio_Pic_v2 from '../assets/Bio_Pic_v2.jpg'
+import Neon_Lights from '../assets/Neon_Lights.jpg'
 
 export default function About() {
   return (
     <div className="relative py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto flex max-w-2xl flex-col items-end justify-between gap-16 lg:mx-0 lg:max-w-none lg:flex-row">
-          <div className="w-full lg:max-w-lg lg:flex-auto">
+        <div className="mx-auto flex max-w-2xl flex-col items-end justify-center gap-16 lg:mx-0 lg:max-w-none lg:flex-row">
+          <div className="w-full lg:max-w-lg lg:flex-auto flex justify-center">
             <img
               alt="Full Body Press Shot"
-              src={Bio_Pic_v2}
-              className="aspect-[6/5] w-full bg-gray-50 object-cover lg:aspect-auto lg:h-[34.5rem]"
+              src={Neon_Lights}
+              className="w-max bg-gray-50 object-contain lg:aspect-auto lg:h-[34.5rem]"
             />
           </div>
-          <div className="w-full lg:max-w-xl lg:flex-auto text-white backdrop-blur-[1px] drop-shadow-xl">
+          <div className="w-full lg:max-w-lg lg:flex-auto text-white backdrop-blur-[1px] drop-shadow-xl">
             <h2 className="text-4xl font-semibold tracking-[4px]">ABOUT</h2>
             <p className="mt-6">
               MERAKII, a Colorado native turned LA-based producer & DJ, started her musical journey in 2017 with Academy of DJs. Her music consists of various genres including trap, dance-pop, bass, and hip hop.
