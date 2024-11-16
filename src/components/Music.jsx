@@ -1,4 +1,4 @@
-import { faSpotify, faSoundcloud, faApple, faAmazon } from '@fortawesome/free-brands-svg-icons'
+import { faSpotify, faSoundcloud, faApple, faAmazon, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import Abort_Track_Image from '../assets/Abort_Track_Image.png'
 import High_Track_Image from '../assets/High_Track_Image.png'
 import Quantum_City_Track_Image from '../assets/Quantum_City_Track_Image.png'
@@ -27,6 +27,11 @@ const songs = [
         href: 'https://music.apple.com/us/album/abort-single/1677093347',
         icon: faApple,
       },
+      {
+        name: 'YouTube',
+        href: 'https://www.youtube.com/watch?v=YKAiCKCDcOM&ab_channel=MERAKII',
+        icon: faYoutube,
+      },
     ]
   },
   {
@@ -50,6 +55,11 @@ const songs = [
         href: 'https://music.apple.com/us/album/high-single/1661438526',
         icon: faApple,
       },
+      {
+        name: 'YouTube',
+        href: 'https://www.youtube.com/watch?v=kzy3XA21QIo&ab_channel=MERAKII',
+        icon: faYoutube,
+      },
     ]
   },
   {
@@ -64,19 +74,19 @@ const songs = [
         icon: faSpotify,
       },
       {
+        name: 'SoundCloud',
+        href: 'https://on.soundcloud.com/mmMLQJN4prWNNBHK7',
+        icon: faSoundcloud,
+      },
+      {
         name: 'Apple Music',
         href: 'https://music.apple.com/us/album/quantum-city/1773003430?i=1773003431',
         icon: faApple,
       },
       {
-        name: 'Amazon Music',
-        href: 'https://music.amazon.com/albums/B0DJQ6QFZW?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_WWhQ1jRkR0s9rQS0pCsDxaLk6&trackAsin=B0DJQ6Z2MX',
-        icon: faAmazon,
-      },
-      {
-        name: 'Pandora',
-        href: 'https://pandora.app.link/VeUlEA77mOb',
-        icon: 'PandoraIcon',
+        name: 'YouTube',
+        href: 'https://www.youtube.com/watch?v=pg1SwmSXyIw&ab_channel=MERAKII',
+        icon: faYoutube,
       },
     ]
   },
