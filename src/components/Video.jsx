@@ -48,8 +48,8 @@ function Tabs({ tabs, setTabs }) {
 
 export default function Video() {
   const [tabs, setTabs] = useState([
-    { name: 'Music Video', href: 'https://www.youtube.com/embed/8Xo1H_syE4Y', current: true },
-    { name: 'Live Set', href: 'https://www.youtube.com/embed/jixFFRlR1n4', current: false },
+    { name: 'Live Set', href: 'https://www.youtube.com/embed/jixFFRlR1n4', current: true },
+    { name: 'Music Video', href: 'https://www.youtube.com/embed/8Xo1H_syE4Y', current: false },
   ])
 
   return (
